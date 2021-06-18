@@ -2095,7 +2095,7 @@ class IndexLookupSavingTest(keras_parameterized.TestCase,
     # TODO(b/149526183): Can't clear session when TF2 is disabled.
     if tf.__internal__.tf2.enabled():
       keras.backend.clear_session()
-    tf.compat.v1.gfile.Remove(vocab_file)
+    tf.io.gfile.remove(vocab_file)
 
     loaded_model = keras.models.load_model(
         output_path, custom_objects={"IndexLookup": index_lookup.IndexLookup})
@@ -2166,7 +2166,7 @@ class IndexLookupSavingTest(keras_parameterized.TestCase,
     # TODO(b/149526183): Can't clear session when TF2 is disabled.
     if tf.__internal__.tf2.enabled():
       keras.backend.clear_session()
-    tf.compat.v1.gfile.Remove(vocab_file)
+    tf.io.gfile.remove(vocab_file)
 
     loaded_model = keras.models.load_model(
         output_path, custom_objects={"IndexLookup": index_lookup.IndexLookup})
@@ -2238,7 +2238,7 @@ class IndexLookupSavingTest(keras_parameterized.TestCase,
     # TODO(b/149526183): Can't clear session when TF2 is disabled.
     if tf.__internal__.tf2.enabled():
       keras.backend.clear_session()
-    tf.compat.v1.gfile.Remove(vocab_file)
+    tf.io.gfile.remove(vocab_file)
 
     loaded_model = keras.models.load_model(
         output_path, custom_objects={"IndexLookup": index_lookup.IndexLookup})
